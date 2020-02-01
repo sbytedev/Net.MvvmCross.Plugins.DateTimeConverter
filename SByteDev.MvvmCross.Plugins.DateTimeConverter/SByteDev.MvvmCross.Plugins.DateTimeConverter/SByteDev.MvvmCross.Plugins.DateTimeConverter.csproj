@@ -1,0 +1,42 @@
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;Xamarin.iOS10;MonoAndroid90</TargetFrameworks>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>SByteDev.MvvmCross.Plugins.DateTimeConverter</PackageId>
+        <PackageVersion>1.0.1</PackageVersion>
+        <Title>MvvmCross DateTimeConverter Plugin</Title>
+        <Description>DateTimeConverter Plugin for MvvmCross.</Description>
+        <Copyright>SByteDev</Copyright>
+        <Authors>Prin53, SByteDev</Authors>
+        <Owners>Prin53, SByteDev</Owners>
+        <NeutralLanguage>en</NeutralLanguage>
+        <PackageTags>xamarin, datetimeconverter</PackageTags>
+        <PackageIconUrl>https://i.imgur.com/DtkfyPTm.jpg</PackageIconUrl>
+        <PackageProjectUrl>https://github.com/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter</PackageProjectUrl>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter</RepositoryUrl>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+        <DesignTimeBuild>false</DesignTimeBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MvvmCross" Version="6.4.2" />
+        <Compile Include="Shared\**\*.cs" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+        <Compile Include="Platforms\Android\**\*.cs" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+        <Compile Include="Platforms\iOS\**\*.cs" />
+    </ItemGroup>
+
+</Project>

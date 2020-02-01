@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SByteDev.MvvmCross.Plugins.DateTimeConverter", "SByteDev.MvvmCross.Plugins.DateTimeConverter\SByteDev.MvvmCross.Plugins.DateTimeConverter.csproj", "{D4A70E36-99EC-4A53-80BA-AB8401A7716E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo", "SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.csproj", "{3362F567-9100-44AB-BED4-E178C57EB204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.Android", "SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.Android\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.Android.csproj", "{01612779-AE34-4518-88B6-9DE89DE70A3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.iOS", "SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.iOS\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.iOS.csproj", "{C7B71886-EB1B-43C8-B2F5-73ACB1D9A585}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4A70E36-99EC-4A53-80BA-AB8401A7716E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A70E36-99EC-4A53-80BA-AB8401A7716E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A70E36-99EC-4A53-80BA-AB8401A7716E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A70E36-99EC-4A53-80BA-AB8401A7716E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3362F567-9100-44AB-BED4-E178C57EB204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3362F567-9100-44AB-BED4-E178C57EB204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3362F567-9100-44AB-BED4-E178C57EB204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3362F567-9100-44AB-BED4-E178C57EB204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01612779-AE34-4518-88B6-9DE89DE70A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01612779-AE34-4518-88B6-9DE89DE70A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01612779-AE34-4518-88B6-9DE89DE70A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01612779-AE34-4518-88B6-9DE89DE70A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B71886-EB1B-43C8-B2F5-73ACB1D9A585}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{C7B71886-EB1B-43C8-B2F5-73ACB1D9A585}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{C7B71886-EB1B-43C8-B2F5-73ACB1D9A585}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{C7B71886-EB1B-43C8-B2F5-73ACB1D9A585}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+EndGlobal
