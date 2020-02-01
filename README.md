@@ -2,7 +2,6 @@
 ![GitHub](https://img.shields.io/github/license/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter.svg)
 ![Nuget](https://img.shields.io/nuget/v/SByteDev.MvvmCross.Plugins.DateTimeConverter.svg)
 ![](https://github.com/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter/workflows/Build/badge.svg)
-[![codecov](https://codecov.io/gh/SByteDev/Net.MvvmCross.lugins.DateTimeConverter/branch/master/graph/badge.svg)](https://codecov.io/gh/SByteDev/Net.MvvmCross.lugins.DateTimeConverter)
 [![CodeFactor](https://www.codefactor.io/repository/github/sbytedev/net.mvvmcross.plugins.datetimeconverter/badge)](https://www.codefactor.io/repository/github/sbytedev/net.mvvmcross.plugins.datetimeconverter)
 
 Provides a set of native converters to convert DateTime into the user-friendly string.
