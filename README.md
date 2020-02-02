@@ -1,4 +1,4 @@
-# MvvmCross FeatureRegistry Plugin
+# MvvmCross DateTimeConverter Plugin
 ![GitHub](https://img.shields.io/github/license/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter.svg)
 ![Nuget](https://img.shields.io/nuget/v/SByteDev.MvvmCross.Plugins.DateTimeConverter.svg)
 ![Build](https://github.com/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter/workflows/Build/badge.svg)
