@@ -21,8 +21,10 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
     - name: Restore NuGet packages
+      working-directory: ${{ env.solution-directory }}
       run: nuget restore
     - name: Build using MSBuild
+      working-directory: ${{ env.solution-directory }}
       run: msbuild -p:Configuration=Release
     - name: Push to NuGet
       working-directory: ${{ env.solution-directory }}
