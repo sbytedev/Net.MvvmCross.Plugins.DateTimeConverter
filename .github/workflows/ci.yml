@@ -10,7 +10,8 @@ jobs:
 
     runs-on: macos-latest
     env:
-      working-directory: ./SByteDev.MvvmCross.Plugins.DateTimeConverter
+      SOLUTION_DIR: ./SByteDev.MvvmCross.Plugins.DateTimeConverter
+      PROJECT_DIR: SByteDev.MvvmCross.Plugins.DateTimeConverter
 
     steps:
     - name: Checkout
@@ -20,8 +21,8 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
     - name: Restore NuGet packages
-      working-directory: ${{ env.working-directory }}
+      working-directory: ${{ env.SOLUTION_DIR }}
       run: nuget restore
     - name: Build using MSBuild
-      working-directory: ${{ env.working-directory }}
+      working-directory: ${{ env.SOLUTION_DIR }}
       run: msbuild -p:Configuration=Release
