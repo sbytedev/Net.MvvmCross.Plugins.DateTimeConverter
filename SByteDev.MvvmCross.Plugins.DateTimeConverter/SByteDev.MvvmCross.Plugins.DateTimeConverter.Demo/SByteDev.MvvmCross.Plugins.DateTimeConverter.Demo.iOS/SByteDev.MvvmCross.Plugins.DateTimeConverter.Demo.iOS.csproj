@@ -23,7 +23,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -32,7 +32,7 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
@@ -118,7 +118,7 @@
       <Name>SByteDev.MvvmCross.Plugins.DateTimeConverter</Name>
     </ProjectReference>
     <ProjectReference Include="..\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.csproj">
-      <Project>{E69D7A6C-707E-4C8C-8505-6692136322C8}</Project>
+      <Project>{3362F567-9100-44AB-BED4-E178C57EB204}</Project>
       <Name>SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo</Name>
     </ProjectReference>
   </ItemGroup>
