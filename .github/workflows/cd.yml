@@ -10,8 +10,9 @@ jobs:
 
     runs-on: macos-latest
     env:
-      solution-directory: ./SByteDev.MvvmCross.Plugins.DateTimeConverter
-      project-directory: SByteDev.MvvmCross.Plugins.DateTimeConverter
+      DEVELOPER_DIR: /Applications/Xcode_11.4.1.app/Contents/Developer
+      SOLUTION_DIR: ./SByteDev.MvvmCross.Plugins.DateTimeConverter
+      PROJECT_DIR: SByteDev.MvvmCross.Plugins.DateTimeConverter
 
     steps:
     - name: Checkout
@@ -21,11 +22,11 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
     - name: Restore NuGet packages
-      working-directory: ${{ env.solution-directory }}
+      working-directory: ${{ env.SOLUTION_DIR }}
       run: nuget restore
     - name: Build using MSBuild
-      working-directory: ${{ env.solution-directory }}
+      working-directory: ${{ env.SOLUTION_DIR }}
       run: msbuild -p:Configuration=Release
     - name: Push to NuGet
-      working-directory: ${{ env.solution-directory }}
-      run: dotnet nuget push ${{ env.project-directory }}/bin/Release/*.nupkg --source nuget.org --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate
+      working-directory: ${{ env.SOLUTION_DIR }}
+      run: dotnet nuget push ${{ env.PROJECT_DIR }}/bin/Release/*.nupkg --source nuget.org --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate
