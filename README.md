@@ -1,7 +1,6 @@
 # MvvmCross DateTimeConverter Plugin
 ![GitHub](https://img.shields.io/github/license/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter.svg)
 ![Nuget](https://img.shields.io/nuget/v/SByteDev.MvvmCross.Plugins.DateTimeConverter.svg)
-![Build](https://github.com/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter/workflows/Build/badge.svg)
 ![CI](https://github.com/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter/workflows/CI/badge.svg?branch=develop)
 ![CD](https://github.com/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter/workflows/CD/badge.svg?branch=master)
 [![CodeFactor](https://www.codefactor.io/repository/github/sbytedev/net.mvvmcross.plugins.datetimeconverter/badge)](https://www.codefactor.io/repository/github/sbytedev/net.mvvmcross.plugins.datetimeconverter)
