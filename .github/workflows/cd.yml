@@ -10,7 +10,6 @@ jobs:
 
     runs-on: macos-latest
     env:
-      DEVELOPER_DIR: /Applications/Xcode_11.4.1.app/Contents/Developer
       SOLUTION_DIR: ./SByteDev.MvvmCross.Plugins.DateTimeConverter
       PROJECT_DIR: SByteDev.MvvmCross.Plugins.DateTimeConverter
 
