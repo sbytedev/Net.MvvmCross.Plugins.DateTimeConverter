@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-dotnet@v1.4.0
     - name: Restore
       working-directory: ${{ env.SOLUTION_DIR }}
-      run: dotnet restore
+      run: nuget restore
     - name: Build
       working-directory: ${{ env.SOLUTION_DIR }}
       run: msbuild -p:Configuration=Release
