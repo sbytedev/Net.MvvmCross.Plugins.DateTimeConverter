@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   build:
@@ -11,7 +11,6 @@ jobs:
     runs-on: macos-latest
     env:
       SOLUTION_DIR: ./SByteDev.MvvmCross.Plugins.DateTimeConverter
-      PROJECT_DIR: SByteDev.MvvmCross.Plugins.DateTimeConverter
 
     steps:
     - name: Checkout
