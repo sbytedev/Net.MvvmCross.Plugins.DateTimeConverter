@@ -16,36 +16,31 @@ Install-Package SByteDev.MvvmCross.Plugins.DateTimeConverter
 ```
 
 ## Usage
+```cs
+using SByteDev.MvvmCross.Plugins.DateTimeConverter;
+```
 
 ### iOS
-```cs
-using SByteDev.MvvmCross.Plugins.DateTimeConverter;
-
-var set = this.CreateBindingSet<View, ViewModel>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToLongDateStringValueConverter>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToLongDateTimeStringValueConverter>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToLongTimeStringValueConverter>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToMediumDateStringValueConverter>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToMediumDateTimeStringValueConverter>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToMediumTimeStringValueConverter>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToShortDateStringValueConverter>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToShortDateTimeStringValueConverter>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToShortTimeStringValueConverter>();
-set.Bind(label).To(vm => vm.DateTime).WithConversion<DateTimeToRelativeDateTimeStringValueConverter>();
-set.Apply();
-```
+|Converter|Output|
+|---------|------|
+|DateTimeToLongDateString|Feb 3, 2020|
+|DateTimeToLongDateTimeString|Feb 3, 2020 at 6:30:10 PM GMT+3|
+|DateTimeToLongTimeString|6:30:10 PM GMT+3|
+|DateTimeToMediumDateString|Feb 3, 2020|
+|DateTimeToMediumDateTimeString|Feb 3, 2020 at 6:30:10 PM|
+|DateTimeToMediumTimeString|6:30:10 PM|
+|DateTimeToShortDateString|2/3/20|
+|DateTimeToShortDateTimeString|2/3/20, 6:30 PM|
+|DateTimeToShortTimeString|6:30 PM|
+|DateTimeToRelativeDateTimeString|now,last week, etc.|
 
 ### Android
-```cs
-using SByteDev.MvvmCross.Plugins.DateTimeConverter;
-
-var set = this.CreateBindingSet<View, ViewModel>();
-set.Bind(textView).To(vm => vm.DateTime).WithConversion<DateTimeToDateStringValueConverter>();
-set.Bind(textView).To(vm => vm.DateTime).WithConversion<DateTimeToDateTimeStringValueConverter>();
-set.Bind(textView).To(vm => vm.DateTime).WithConversion<DateTimeToTimeStringValueConverter>();
-set.Bind(textView).To(vm => vm.DateTime).WithConversion<DateTimeToRelativeStringValueConverter>();
-set.Apply();
-```
+|Converter|Output|
+|---------|------|
+|DateTimeToDateString|February 3|
+|DateTimeToDateTimeString|February 3, 6:30 PM|
+|DateTimeToTimeString|6:30 PM|
+|DateTimeToRelativeString|May 11, 2020|
 
 ## Implementation
 
