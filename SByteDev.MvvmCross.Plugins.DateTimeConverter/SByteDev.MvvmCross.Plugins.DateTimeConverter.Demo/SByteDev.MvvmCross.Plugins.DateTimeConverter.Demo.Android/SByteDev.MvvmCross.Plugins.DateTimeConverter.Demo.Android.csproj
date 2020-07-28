@@ -214,16 +214,6 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SByteDev.MvvmCross.Plugins.DateTimeConverter\SByteDev.MvvmCross.Plugins.DateTimeConverter.csproj">
-      <Project>{d4a70e36-99ec-4a53-80ba-ab8401a7716e}</Project>
-      <Name>SByteDev.MvvmCross.Plugins.DateTimeConverter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.csproj">
-      <Project>{3362F567-9100-44AB-BED4-E178C57EB204}</Project>
-      <Name>SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Resources\layout" />
     <Folder Include="Resources\layout\" />
   </ItemGroup>
@@ -234,6 +224,16 @@
       <Generator>
       </Generator>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SByteDev.MvvmCross.Plugins.DateTimeConverter\SByteDev.MvvmCross.Plugins.DateTimeConverter.csproj">
+      <Project>{7B302048-F202-477D-A703-CBAD67F4EF87}</Project>
+      <Name>SByteDev.MvvmCross.Plugins.DateTimeConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo\SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.csproj">
+      <Project>{0E9A6203-DCB8-4B32-8F46-6ECE61FBA9C3}</Project>
+      <Name>SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets')" />

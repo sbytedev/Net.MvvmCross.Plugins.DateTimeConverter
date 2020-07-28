@@ -43,7 +43,7 @@ namespace SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.iOS
             var relativePastLabel = AddLabel("Converted relative past");
 
             var set = this.CreateBindingSet<MainViewController, MainViewModel>();
-            set.Bind(NavigationItem.RightBarButtonItem).To(vm => vm.RefreshCurrentDateTimeCommand);
+            set.Bind(NavigationItem.RightBarButtonItem).For("Click").To(vm => vm.RefreshCurrentDateTimeCommand);
             set.Bind(defaultLabel).To(vm => vm.CurrentDateTime);
             set.Bind(fullLabel).To(vm => vm.CurrentDateTime).WithConversion<DateTimeToMediumDateTimeStringValueConverter>();
             set.Bind(dateLabel).To(vm => vm.CurrentDateTime).WithConversion<DateTimeToMediumDateStringValueConverter>();
