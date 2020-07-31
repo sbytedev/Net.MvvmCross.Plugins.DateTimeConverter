@@ -35,22 +35,52 @@ namespace SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.iOS
                 _stackView.TopAnchor.ConstraintEqualTo(View.SafeAreaLayoutGuide.TopAnchor, 16)
             });
 
-            var defaultLabel = AddLabel("Default");
-            var fullLabel = AddLabel("Converted full");
-            var dateLabel = AddLabel("Converted date only");
-            var timeLabel = AddLabel("Converted time only");
-            var relativeFutureLabel = AddLabel("Converted relative future");
-            var relativePastLabel = AddLabel("Converted relative past");
+            AddHeaderLabel("DateTime");
+
+            var defaultDateTimeLabel = AddLabel("Default");
+            var fullDateTimeLabel = AddLabel("Converted full");
+            var dateDateTimeLabel = AddLabel("Converted date only");
+            var timeDateTimeLabel = AddLabel("Converted time only");
+            var relativeFutureDateTimeLabel = AddLabel("Converted relative future");
+            var relativePastDateTimeLabel = AddLabel("Converted relative past");
+
+            AddHeaderLabel("DateTimeOffset");
+
+            var defaultDateTimeOffsetLabel = AddLabel("Default");
+            var fullDateTimeOffsetLabel = AddLabel("Converted full");
+            var dateDateTimeOffsetLabel = AddLabel("Converted date only");
+            var timeDateTimeOffsetLabel = AddLabel("Converted time only");
+            var relativeFutureDateTimeOffsetLabel = AddLabel("Converted relative future");
+            var relativePastDateTimeOffsetLabel = AddLabel("Converted relative past");
 
             var set = this.CreateBindingSet<MainViewController, MainViewModel>();
             set.Bind(NavigationItem.RightBarButtonItem).For("Click").To(vm => vm.RefreshCurrentDateTimeCommand);
-            set.Bind(defaultLabel).To(vm => vm.CurrentDateTime);
-            set.Bind(fullLabel).To(vm => vm.CurrentDateTime).WithConversion<DateTimeToMediumDateTimeStringValueConverter>();
-            set.Bind(dateLabel).To(vm => vm.CurrentDateTime).WithConversion<DateTimeToMediumDateStringValueConverter>();
-            set.Bind(timeLabel).To(vm => vm.CurrentDateTime).WithConversion<DateTimeToMediumTimeStringValueConverter>();
-            set.Bind(relativeFutureLabel).To(vm => vm.FutureDateTime).WithConversion<DateTimeToRelativeDateTimeStringValueConverter>();
-            set.Bind(relativePastLabel).To(vm => vm.PastDateTime).WithConversion<DateTimeToRelativeDateTimeStringValueConverter>();
+            set.Bind(defaultDateTimeLabel).To(vm => vm.CurrentDateTime);
+            set.Bind(fullDateTimeLabel).To(vm => vm.CurrentDateTime).WithConversion<DateTimeToMediumDateTimeStringValueConverter>();
+            set.Bind(dateDateTimeLabel).To(vm => vm.CurrentDateTime).WithConversion<DateTimeToMediumDateStringValueConverter>();
+            set.Bind(timeDateTimeLabel).To(vm => vm.CurrentDateTime).WithConversion<DateTimeToMediumTimeStringValueConverter>();
+            set.Bind(relativeFutureDateTimeLabel).To(vm => vm.FutureDateTime).WithConversion<DateTimeToRelativeDateTimeStringValueConverter>();
+            set.Bind(relativePastDateTimeLabel).To(vm => vm.PastDateTime).WithConversion<DateTimeToRelativeDateTimeStringValueConverter>();
+            set.Bind(defaultDateTimeOffsetLabel).To(vm => vm.CurrentDateTimeOffset);
+            set.Bind(fullDateTimeOffsetLabel).To(vm => vm.CurrentDateTimeOffset).WithConversion<DateTimeOffsetToMediumDateTimeStringValueConverter>();
+            set.Bind(dateDateTimeOffsetLabel).To(vm => vm.CurrentDateTimeOffset).WithConversion<DateTimeOffsetToMediumDateStringValueConverter>();
+            set.Bind(timeDateTimeOffsetLabel).To(vm => vm.CurrentDateTimeOffset).WithConversion<DateTimeOffsetToMediumTimeStringValueConverter>();
+            set.Bind(relativeFutureDateTimeOffsetLabel).To(vm => vm.FutureDateTimeOffset).WithConversion<DateTimeOffsetToRelativeDateTimeStringValueConverter>();
+            set.Bind(relativePastDateTimeOffsetLabel).To(vm => vm.PastDateTimeOffset).WithConversion<DateTimeOffsetToRelativeDateTimeStringValueConverter>();
             set.Apply();
+        }
+
+        private void AddHeaderLabel(string title)
+        {
+            var label = new UILabel
+            {
+                Text = title,
+                Lines = 0,
+                LineBreakMode = UILineBreakMode.WordWrap,
+                Font = UIFont.PreferredHeadline
+            };
+
+            _stackView.AddArrangedSubview(label);
         }
 
         private UILabel AddLabel(string title)
