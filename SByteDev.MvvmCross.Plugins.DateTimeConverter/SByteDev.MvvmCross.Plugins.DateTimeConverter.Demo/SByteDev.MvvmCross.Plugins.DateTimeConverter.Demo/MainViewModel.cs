@@ -13,6 +13,10 @@ namespace SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo
         public DateTime FutureDateTime { get; private set; }
         public DateTime PastDateTime { get; private set; }
 
+        public DateTimeOffset CurrentDateTimeOffset { get; private set; }
+        public DateTimeOffset FutureDateTimeOffset { get; private set; }
+        public DateTimeOffset PastDateTimeOffset { get; private set; }
+
         public MainViewModel()
         {
             RefreshCurrentDateTimeCommand = new MvxCommand(RefreshCurrentDateTime);
@@ -23,9 +27,12 @@ namespace SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo
         private void RefreshCurrentDateTime()
         {
             CurrentDateTime = DateTime.UtcNow;
-
             FutureDateTime = CurrentDateTime + TimeSpan.FromDays(10);
             PastDateTime = CurrentDateTime - TimeSpan.FromDays(10);
+
+            CurrentDateTimeOffset = DateTimeOffset.UtcNow;
+            FutureDateTimeOffset = CurrentDateTimeOffset + TimeSpan.FromDays(10);
+            PastDateTimeOffset = CurrentDateTimeOffset - TimeSpan.FromDays(10);
 
             RaiseAllPropertiesChanged();
         }
