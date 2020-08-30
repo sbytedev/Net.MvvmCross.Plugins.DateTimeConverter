@@ -1,5 +1,6 @@
 using Android.App;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platforms.Android.Core;
+using MvvmCross.Platforms.Android.Views;
 
 namespace SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.Android
 {
@@ -8,7 +9,7 @@ namespace SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.Android
         Theme = "@style/Theme.AppCompat.Light.NoActionBar",
         NoHistory = true
     )]
-    public sealed class SplashScreenActivity : MvxSplashScreenAppCompatActivity<MvxAppCompatSetup<App>, App>
+    public sealed class SplashScreenActivity : MvxSplashScreenActivity<MvxAndroidSetup<App>, App>
     {
     }
 }
