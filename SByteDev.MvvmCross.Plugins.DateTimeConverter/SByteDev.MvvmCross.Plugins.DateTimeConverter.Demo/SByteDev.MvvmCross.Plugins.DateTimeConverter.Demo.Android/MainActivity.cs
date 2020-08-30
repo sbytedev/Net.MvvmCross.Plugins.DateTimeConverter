@@ -1,14 +1,14 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Views;
-using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
+using MvvmCross.Platforms.Android.Views;
 
 namespace SByteDev.MvvmCross.Plugins.DateTimeConverter.Demo.Android
 {
     [Activity(Theme = "@style/Theme.AppCompat.Light")]
     [MvxActivityPresentation]
-    public class MainActivity : MvxAppCompatActivity<MainViewModel>
+    public class MainActivity : MvxActivity<MainViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
