@@ -1,11 +1,11 @@
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;Xamarin.iOS10;MonoAndroid90</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;Xamarin.iOS10;MonoAndroid10.0</TargetFrameworks>
         <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>SByteDev.MvvmCross.Plugins.DateTimeConverter</PackageId>
-        <PackageVersion>1.0.4</PackageVersion>
+        <PackageVersion>1.0.5</PackageVersion>
         <Title>MvvmCross DateTimeConverter Plugin</Title>
         <Description>DateTimeConverter Plugin for MvvmCross.</Description>
         <Copyright>SByteDev</Copyright>
@@ -17,7 +17,7 @@
         <PackageProjectUrl>https://github.com/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter</PackageProjectUrl>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageReleaseNotes>Update MvvmCross to 7.0.0, migrate to AndroidX</PackageReleaseNotes>
+        <PackageReleaseNotes>Update MonoAndroid to 10.0</PackageReleaseNotes>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/SByteDev/Net.MvvmCross.Plugins.DateTimeConverter</RepositoryUrl>
