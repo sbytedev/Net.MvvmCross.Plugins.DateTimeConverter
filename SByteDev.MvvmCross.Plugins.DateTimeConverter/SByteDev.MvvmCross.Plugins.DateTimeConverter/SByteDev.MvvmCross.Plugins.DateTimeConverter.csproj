@@ -28,7 +28,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MvvmCross" Version="7.0.0" />
+        <PackageReference Include="MvvmCross" Version="7.0.1" />
         <Compile Include="Shared\**\*.cs" />
     </ItemGroup>
 
